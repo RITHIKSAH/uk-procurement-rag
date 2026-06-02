@@ -1,0 +1,11 @@
+pandas
+numpy
+sentence-transformers
+chromadb
+rank-bm25
+transformers
+accelerate
+bitsandbytes
+torch
+huggingface-hub
+streamlit
