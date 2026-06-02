@@ -119,7 +119,7 @@ uk-procurement-rag/
 ├── .gitignore
 │
 ├── notebooks/
-│   └── Bip_Solutions_Data_Science_Tech_Assignment.ipynb
+│   └── Rithik_Sah_Bip_Solutions_Data_Science_Tech_Assignment.ipynb
 │
 ├── src/
 │   ├── ingest.py
@@ -191,7 +191,7 @@ os.environ["HUGGINGFACEHUB_API_TOKEN"] = "your_token_here"
 Open:
 
 ```text
-notebooks/Bip_Solutions_Data_Science_Tech_Assignment.ipynb
+notebooks/Rithik_Sah_Bip_Solutions_Data_Science_Tech_Assignment.ipynb
 ```
 
 and execute cells sequentially.
