@@ -116,3 +116,24 @@ df_retrieval.to_csv("final_retrieval_contracts_2026.csv", index=False)
 
 print(df_retrieval.shape)
 df_retrieval.head()
+
+# Build RAG Text
+def safe_text(value):
+    return "" if value is None or pd.isna(value) else str(value)
+
+def build_rag_text(row):
+    return f"""
+Title: {safe_text(row.get('title'))}
+Description: {safe_text(row.get('description'))}
+Buyer: {safe_text(row.get('buyer_name'))}
+Suppliers: {safe_text(row.get('supplier_names'))}
+CPV Codes: {safe_text(row.get('cpv_codes'))}
+CPV Categories: {safe_text(row.get('cpv_descriptions'))}
+Regions: {safe_text(row.get('regions'))}
+Procurement Method: {safe_text(row.get('procurement_method'))}
+Procurement Details: {safe_text(row.get('procurement_method_details'))}
+Main Category: {safe_text(row.get('main_procurement_category'))}
+Value GBP: {safe_text(row.get('max_contract_value'))}
+""".strip()
+
+df["rag_text"] = df.apply(build_rag_text, axis=1)
